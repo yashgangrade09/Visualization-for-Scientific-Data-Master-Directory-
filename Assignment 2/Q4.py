@@ -6,4 +6,9 @@ for i in range(16):
 	arrow.TipResolution = 12
 	arrow_list.append(arrow)
 
-rv = 
+rv = GetActiveViewOrCreate('RenderView')
+
+for i in range(16):
+	display = Show(arrow_list[i], rv)
+	display.Orientation = [0,0,i*22.5]
+	Render()
